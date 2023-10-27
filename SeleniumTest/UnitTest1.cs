@@ -12,7 +12,6 @@ namespace SeleniumTest
         {
             webDriver.Url = "https://kbkdist.ru/";
             Assert.That(webDriver.Title, Is.EqualTo("Образовательная платформа Калининградского бизнес-колледжа"));
-            //webDriver.Close();
         }
         [TestCase]
         public void LoginKBK()
@@ -34,12 +33,6 @@ namespace SeleniumTest
             webDriver.Url = "https://kbkdist.ru/";
             IWebElement go = webDriver.FindElement(By.XPath("/html/body/nav/div/ul/li[2]/div/span/a"));
             go.Click();
-        }
-
-            [TearDown]
-        public void testEnd()
-        {
-            //Assert.Pass();
         }
     }
 }
